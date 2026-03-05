@@ -8,6 +8,10 @@ app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 5000;
 
+app.get("/", (req, res) => {
+  res.send("Backend server is running");
+});
+
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
